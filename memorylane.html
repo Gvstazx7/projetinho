@@ -26,23 +26,30 @@
         position: relative;
       }
 
-      .confetti {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        pointer-events: none;
-      }
+    .snow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
 
-      .confetti-piece {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background: #ffd1f9;
-        top: -20px;
-        opacity: 0;
-      }
-
+.snowflake {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  top: -20px;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+      
       .scrapbook-bg {
         position: fixed;
         top: 0;
